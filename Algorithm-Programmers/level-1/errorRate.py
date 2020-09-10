@@ -1,4 +1,4 @@
-# 2020/08/16 (일)
+# 2020/09/10 (목)
 def solution(N, stages):
     users, errorRate, answer = {}, {}, []
     for i in range(1, N + 2):
