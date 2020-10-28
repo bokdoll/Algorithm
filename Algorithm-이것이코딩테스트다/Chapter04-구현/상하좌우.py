@@ -1,5 +1,5 @@
-# 2020/10/18 ()
-# [Chapter03-Greedy 예제 4-1] 상하좌우
+# 2020/10/18 (일)
+# [Chapter04-구현 예제 4-1] 상하좌우
 
 def solution():
     N = int(input())
