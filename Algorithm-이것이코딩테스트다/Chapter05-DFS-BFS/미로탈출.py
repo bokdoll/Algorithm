@@ -16,31 +16,26 @@ def bfs(graph, x, y, n, m):
     queue = deque()
     queue.append((x, y))
 
-    # 이동할 네 방향향 정의(하, 우, 상, 좌)
-    dx = [0, 1, 0, -1]
-    dy = [1, 0, -1, 0]
+    # 이동할 네 방향향 정의(상, 하, 좌, 우)
+    dx = [0, 0, -1, 1]
+    dy = [-1, 1, 0, 0]
 
-    answer = 1
-
-    # 큐가 빌 때까지 반봅
+    # 큐가 빌 때까지 반복.
     while queue:
         x, y = queue.popleft()
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
-            if nx == m-1 and ny == n-1:
-                return answer + 1
+
             if nx < 0 or nx >= m or ny < 0 or ny >= n:
                 continue
-            elif graph[ny][nx] == 1:
-                print(nx, ny)
-                answer += 1
-                queue.append((nx, ny))
-                graph[ny][nx] = 0
-                break
-            else:
+            if graph[ny][nx] == 0:
                 continue
-    return answer
+            if graph[ny][nx] == 1:
+                graph[ny][nx] = graph[y][x] + 1
+                queue.append((nx, ny))
+
+    return graph[n-1][m-1]
 
 
 if __name__ == "__main__":
