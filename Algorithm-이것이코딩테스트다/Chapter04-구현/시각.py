@@ -1,5 +1,5 @@
 # 2020/10/18 (금)
-# [Chapter03-Greedy 예제 4-2] 시각
+# [Chapter04-구현 예제 4-2] 시각
 
 def solution():
     N = int(input())
