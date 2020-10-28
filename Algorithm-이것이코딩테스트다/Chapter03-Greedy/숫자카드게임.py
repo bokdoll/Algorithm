@@ -1,5 +1,5 @@
 # 2020/10/16 (금)
-# [Chapter03-Greedy] 숫자 카드 게임
+# [Chapter03-Greedy 실전문제] 숫자 카드 게임
 
 import sys
 
