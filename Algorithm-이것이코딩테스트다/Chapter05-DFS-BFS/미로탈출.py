@@ -3,13 +3,13 @@
 
 from collections import deque
 
+
 def solution():
     n, m = map(int, input().split())    # n: 세로, m: 가로
     graph = []
     for _ in range(n):
         graph.append(list(map(int, input())))
     return bfs(graph, 0, 0, n, m)
-
 
 
 def bfs(graph, x, y, n, m):
