@@ -10,13 +10,9 @@ def solution():
     for _ in range(k):
         a, b, c, d = map(int, input().split())
         if b > d:
-            temp = b
-            b = d
-            d = temp
+            b, d = d, b
         if a > c:
-            temp = a
-            a = c
-            c = temp
+            a, c = c, a
         for j in range(b, d):
             for i in range(a, c):
                 graph[j][i] = 1
