@@ -1,23 +1,26 @@
 # 2020/10/23 (금)
 # 정렬-통계학
 from collections import Counter
+import sys
 
 
 def solution():
     n = int(input())
     nums = []
     for i in range(n):
-        nums.append(int(input()))
+        nums.append(int(sys.stdin.readline()))
     nums.sort()
 
     avg = int(round(sum(nums)/n, 0))
 
-    # 최빈값 구하
+    # 최빈값 구하기
     counter = Counter(nums)
     if len(nums) >= 2:
         mode = counter.most_common(n=2)
-        if mode[0][1] == mode[1][1]: mode = mode[1][0]
-        else: mode = mode[0][0]
+        if mode[0][1] == mode[1][1]:
+            mode = mode[1][0]
+        else:
+            mode = mode[0][0]
     else:
         mode = nums[0]
 
